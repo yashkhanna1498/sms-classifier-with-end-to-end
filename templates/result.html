@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Spam SMS Detector</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='spam-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+	</head>
+ <body style="background-color:black;">
+
+        <!-- Website Title -->
+    	<div class="container">
+    		<h2 style="color:GreenYellow" class='container-heading'><span>Spam Detector</span> for (SMS)</h2>
+            <div class='description'>
+                <p  style="color:GhostWhite">Model trained on data by UCL ML available on Kaggle</p>
+    			
+    		</div>
+    	</div>
+
+
+		<!-- Result -->
+		<div style="text-align: center;background-color:AntiqueWhite;"class="results">
+			{% if prediction==1 %}
+				<h2><span class='danger'>This is a SPAM message :(</span></h1>
+
+				<img src="https://gifimage.net/wp-content/uploads/2018/11/no-spam-gif-1.gif" alt="Spam :(">
+			{% elif prediction==0 %}
+				<h2><span class='safe'>This is NOT a spam message :)</span></h1>
+					<img src="https://www.quickonlinetips.com/archives/wp-content/uploads/no-spam.gif" alt="Not Spam :)">
+
+			{% endif %}
+		</div>
+
+		
+    <!-- Footer -->
+       <div style="background-color:Cornsilk;text-align: center;" class='footer'>
+           <div class="contact">
+            <p ><a href="http://www.linkedin.com/in/yashkhanna1498"><i class="fa fa-linkedin fa-2x"></i></a>
+            <a href="https://github.com/yashkhanna1498"><i class="fa fa-github fa-2x"></i></a></p>
+           </div>
+           <p style="color:FireBrick"class='footer-description'>Made for fun in lockdown<br> ©2020 Yash Khanna</p>
+       </div>
+
+	</body>
+</html>

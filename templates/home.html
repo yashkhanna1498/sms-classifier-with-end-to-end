@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Spam SMS Detector</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='spam-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body style="background-color:black;">
+
+        <!-- Website Title -->
+    	<div class="container">
+    		<h2 style="color:GreenYellow" class='container-heading'><span>Spam Detector</span> for (SMS)</h2>
+            <div class='description'>
+                <p  style="color:GhostWhite">Model trained on data by UCL ML available on Kaggle</p>
+    			
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div  class="ml-container" style="text-align: center;">
+    		<form action="{{ url_for('predict') }}" method="POST">
+        		<textarea   style="background-color:AntiqueWhite;" class='message-box' name="message" rows="15" cols="75" placeholder="Enter Your Message Here..."></textarea><br/>
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+       </div>
+    <!-- Footer -->
+       <div style="background-color:Cornsilk;text-align: center;" class='footer'>
+           <div class="contact">
+            <p ><a href="http://www.linkedin.com/in/yashkhanna1498"><i class="fa fa-linkedin fa-2x"></i></a>
+            <a href="https://github.com/yashkhanna1498"><i class="fa fa-github fa-2x"></i></a></p>
+           </div>
+           <p style="color:FireBrick"class='footer-description'>Made for fun in lockdown<br> ©2020 Yash Khanna</p>
+       </div>
+
+    </body>
+</html>
